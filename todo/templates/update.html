@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block heading %}Update Task{% endblock %}
+{% block content %}
+<style>
+    input{
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        width: 100%;
+    }
+</style>
+<div class="col align-self-center">
+    <form method="POST" action="">{% csrf_token %}
+        {{form}}
+        <button class="btn mt-3 btn-primary" type="submit" value="update" name="update task">Update</button>
+    </form>
+</div>
+{% endblock %}
